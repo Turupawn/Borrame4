@@ -1,0 +1,13 @@
+name: Oaoa
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    - uses: actions/checkout@v2
+      with:
+        ref: main
+    - steps:
+      - run: echo "Deploying to production server on branch $GITHUB_REF"
