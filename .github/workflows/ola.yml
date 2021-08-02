@@ -6,8 +6,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    steps:
     - uses: actions/checkout@v2
       with:
         ref: main
-    - steps:
-      - run: echo "Deploying to production server on branch $GITHUB_REF"
+    - run: echo "Deploying to production server on branch $GITHUB_REF"
