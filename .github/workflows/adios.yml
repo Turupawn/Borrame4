@@ -1,0 +1,16 @@
+name: Bye
+on:
+  push:
+    branches: [ test ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: test
+    - run: |
+       echo "2Deploying to production server on branch $GITHUB_REF"
+       cat test_file
