@@ -13,4 +13,4 @@ jobs:
         ref: main
     - run: |
        echo "2Deploying to production server on branch $GITHUB_REF"
-       ls
+       cat test_file
